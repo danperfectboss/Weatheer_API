@@ -20,6 +20,8 @@ from app_weather import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('',views.get_data, name='Index')
-    path('weather', views.WeatherView.as_view()),
+    path('weather', views.WeatherView.as_view(), name='Weather'),
+    path('', views.indexView,name='Index'),
+
 
 ]
