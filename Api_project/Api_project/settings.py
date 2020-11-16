@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 
@@ -125,3 +125,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 API_KEY_WEATHER = '0366cd96b4f98ac9cf29eb18cf6ca8a2'
+
+CACHES = {
+    'default':{
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'weather_cache'
+
+    }
+}
