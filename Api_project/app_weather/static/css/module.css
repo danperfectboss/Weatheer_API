@@ -1,0 +1,12 @@
+.imageWeather{
+    width: 100%;
+    max-width: 100%;
+}
+
+.MarginTop{
+    margin-top: 70px !important;
+}
+
+body{
+    background-color: lavender;
+}

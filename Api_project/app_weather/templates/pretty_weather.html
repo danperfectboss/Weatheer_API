@@ -1,0 +1,40 @@
+{% extends 'main_template.html' %}
+{% load static %}
+
+{% block data %}
+
+    <div class="container">
+        <div class="row MarginTop">
+            <div class="col-md-6">
+                <img class="imageWeather" src="https://i.pinimg.com/originals/e7/7a/60/e77a6068aa8bb2731e3b6d835c09c84c.gif" alt="">
+            </div>
+            <div class="col-md-6">
+                <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Weather in {{data.location_name}}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><b>Temperature:</b> {{data.temperature}}</td>
+                        <td><b>Wind:</b> {{data.wind}}</td>
+                      </tr>
+                      <tr>
+                        <td><b>Pressure:</b> {{data.pressure}}</td>
+                        <td><b>Humidity:</b> {{data.humidity}}</td>
+                      </tr>
+                      <tr>
+                        <td><b>Sunrise:</b> {{data.sunrise}}</td>
+                        <td><b>Sunset:</b> {{data.sunset}}</td>
+                      </tr>
+                      <tr>
+                        <td><b>Coordenates:</b> {{data.geo_coordinates}}</td>
+                        <td><b>Cloudiness:</b> {{data.cloudiness}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+{% endblock data %}

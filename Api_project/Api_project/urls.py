@@ -15,7 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app_weather import views
+from Api_project import settings
+from django.conf.urls.static import static
+from Api_project.settings import STATIC_ROOT
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # vistas de los datos de json
+    path('weather', views.WeatherView.as_view(), name='Weather'),
+    # vista del formulario 
+    path('', views.indexView,name='Index'),
+    path('pretty_weather', views.pretty_data_view,name='Pretty'),
+
+
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=STATIC_ROOT)
