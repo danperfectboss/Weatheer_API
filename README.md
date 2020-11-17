@@ -1,4 +1,4 @@
-# Weatheer_API
+# Weather_API
 
 1.- Install requiriments with the command:
 
