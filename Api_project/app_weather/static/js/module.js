@@ -12,11 +12,16 @@ function validateKey(event){
 function validateEmpty(){
     var city = $('#city').val()
     var country = $('#country').val()
+    var RBjson = $('#Json').is(':checked')
+    var RBpretty = $('#Pretty').is(':checked')
 
-    if (city != '' && country != ''){
+    if ((city != '' && country != '') && (RBjson === True || RBpretty === True)){
+        
         checkRadioButton()
         
         return true
+        
+        
     }else{
         alertify.error('Fields City and Country must not be empty');
         return false
